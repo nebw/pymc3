@@ -2774,7 +2774,8 @@ class HalfStudentT(PositiveContinuous):
             x = pm.HalfStudentT('x', lam=4, nu=10)
     """
 
-    def __init__(self, nu=1, sigma=None, lam=None, *args, **kwargs):
+    def __init__(self, nu=1, sigma=None, lam=None, sd=None,
+                 *args, **kwargs):
         super(HalfStudentT, self).__init__(*args, **kwargs)
         if sd is not None:
             sigma = sd
