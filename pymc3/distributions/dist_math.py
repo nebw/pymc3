@@ -121,6 +121,8 @@ def rho2sigma(rho):
     :math:`mu + sigma*e = mu + log(1+exp(rho))*e`"""
     return tt.nnet.softplus(rho)
 
+rho2sd = rho2sigma
+sd2rho = sigma2rho
 
 def log_normal(x, mean, **kwargs):
     """
